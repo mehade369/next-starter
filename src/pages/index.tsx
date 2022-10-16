@@ -1,3 +1,4 @@
+import type { NextPage } from 'next';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
@@ -20,14 +21,14 @@ import Vercel from '~/svg/Vercel.svg';
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
-export default function HomePage() {
+const HomePage: NextPage = () => {
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
       <main>
-        <section className='bg-white'>
+        <section className='bg-dark'>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
             <Vercel className='text-5xl' />
             <h1 className='mt-4'>
@@ -71,4 +72,6 @@ export default function HomePage() {
       </main>
     </Layout>
   );
-}
+};
+
+export default HomePage;

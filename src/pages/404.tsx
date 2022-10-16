@@ -1,3 +1,4 @@
+import type { NextPage } from 'next';
 import * as React from 'react';
 import { RiAlarmWarningFill } from 'react-icons/ri';
 
@@ -5,7 +6,7 @@ import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import Seo from '@/components/Seo';
 
-export default function NotFoundPage() {
+const NotFoundPage: NextPage = () => {
   return (
     <Layout>
       <Seo templateTitle='Not Found' />
@@ -26,4 +27,6 @@ export default function NotFoundPage() {
       </main>
     </Layout>
   );
-}
+};
+
+export default NotFoundPage;

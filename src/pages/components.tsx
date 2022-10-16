@@ -1,5 +1,6 @@
 // !STARTERCONF You can delete this page
 import clsx from 'clsx';
+import type { NextPage } from 'next';
 import * as React from 'react';
 
 import Button from '@/components/buttons/Button';
@@ -15,7 +16,7 @@ import Skeleton from '@/components/Skeleton';
 
 type Color = typeof colorList[number];
 
-export default function ComponentsPage() {
+const ComponentsPage: NextPage = () => {
   const [mode, setMode] = React.useState<'dark' | 'light'>('light');
   const [color, setColor] = React.useState<Color>('sky');
   function toggleMode() {
@@ -318,7 +319,9 @@ export default function ComponentsPage() {
       </main>
     </Layout>
   );
-}
+};
+
+export default ComponentsPage;
 
 const colorList = [
   'rose',
